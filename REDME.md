@@ -12,6 +12,8 @@ docker network create network name
 
 docker run -v volume_name:data/db -p 5432:5432  db
 
+docker run -d --name my_postgres -e POSTGRES_PASSWORD=mysecretword -v blog:/var/lib/postgresql/data -p 5432:5432 postgres
+
 
 
 full start a db with network and volume :- docker run -d -v volume_name:data/db --name mongo --network networkName  -p 5432:5432 dbName   (mongodb://name:5432/nameOne)
